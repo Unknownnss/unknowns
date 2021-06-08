@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unknown Site</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Unknownn</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">About Me</h2>
+            <a href="#" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Ma Vie / Mon Experience ! </h2>
+                <p>J'ai commencer à m'intéresser à l'informatique vers mes 8ans à ce moment là j'était souvent sur l'ordianteur de mon père mais je voulais le mien je jouer à des jeux en .io ^^ ensuite vers l'age de mes 10ans j'ai eu mon propre ordinateur un peu vieux '_' mais sa me suffisait pour jouer à minecraft à tous les jeux que j'aimer à ce moment là puis je me suis mis à économiser de l'argent à noel à mon anniversaire etc... jusqu'à atteindre la somme de 350$ et mon père à payer le reste ce qui fait que j'ai eu un bon pc ce qui ma permet de commencer le developpement deux mois après avoir reçu mon ordi ^^ j'avais environ 12 à ce moment là je commencer à apprendre le javascript mais de manière peu sérieuse je recopier du code par ci par là mais je continue à le faire mais je le fait en comprenant ce que j'écrit avant je n'en savais rien je recopier bêtement les lignes de codes et à la moindre erreur j'abbandoner aujourd'hui en 2021 j'ai appris le html/css et plus en détails le javascript je continue sur cette voie n'abbandonner jamais vos rêves !</p>
+
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars')
+            let moon = document.getElementById('moon')
+            let mountains_behind = document.getElementById('mountains_behind')
+            let text = document.getElementById('text')
+            let btn = document.getElementById('btn')
+            let mountains_front = document.getElementById('mountains_front')
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
